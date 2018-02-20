@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Working with Web Workers</title>
+</head>
+
+<body>
+  <h1>Hello, World!</h1>
+
+  <script>
+    let worker = new Worker('worker.js');
+    let msg = {
+      string: 'foo',
+      num: 1,
+      bool: true,
+      arr: [1,2,3]
+    };
+
+    worker.postMessage(msg);
+
+    msg.string = 'bar';
+  </script>
+</body>
+
+</html>

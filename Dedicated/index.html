@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Working with Web Workers</title>
+</head>
+
+<body>
+  <h1>Hello, World!</h1>
+
+  <script>
+    let worker = new Worker('worker.js');
+
+    worker.postMessage('foo');
+    worker.postMessage('bar');
+  </script>
+</body>
+
+</html>
